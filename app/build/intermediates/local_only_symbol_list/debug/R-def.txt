@@ -40,6 +40,7 @@ id recyclerView
 id reviewAuthor
 id reviewContent
 id reviewRecyclerView
+id searchEditText
 id seasonInput
 id seasonSpinner
 id titleText
