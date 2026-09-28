@@ -14,7 +14,9 @@ id castRecyclerView
 id categoriesRecyclerView
 id categoryRecyclerView
 id categoryTitle
+id checkUpdatesBtn
 id contentContainer
+id currentVersionText
 id drawerLayout
 id episodeInput
 id episodeSpinner
@@ -48,6 +50,7 @@ id webView
 layout activity_details
 layout activity_main
 layout activity_player
+layout activity_settings
 layout dialog_episode_picker
 layout fragment_home
 layout fragment_list

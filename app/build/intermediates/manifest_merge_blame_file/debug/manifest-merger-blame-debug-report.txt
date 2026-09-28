@@ -2,142 +2,159 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.veyra.app"
 4    android:versionCode="1"
-5    android:versionName="1.0" >
+5    android:versionName="1.0.0" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
 9        android:targetSdkVersion="34" />
 10
-11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:4:5-67
-11-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:4:22-64
-12
-13    <permission
-13-->[androidx.core:core:1.12.0] /home/clinton/.gradle/caches/transforms-3/2ccd268e0ca2e1cd10ec650ac8067a3e/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
-14        android:name="com.veyra.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-14-->[androidx.core:core:1.12.0] /home/clinton/.gradle/caches/transforms-3/2ccd268e0ca2e1cd10ec650ac8067a3e/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
-15        android:protectionLevel="signature" />
-15-->[androidx.core:core:1.12.0] /home/clinton/.gradle/caches/transforms-3/2ccd268e0ca2e1cd10ec650ac8067a3e/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
-16
-17    <uses-permission android:name="com.veyra.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-17-->[androidx.core:core:1.12.0] /home/clinton/.gradle/caches/transforms-3/2ccd268e0ca2e1cd10ec650ac8067a3e/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
-17-->[androidx.core:core:1.12.0] /home/clinton/.gradle/caches/transforms-3/2ccd268e0ca2e1cd10ec650ac8067a3e/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
-18
-19    <application
-19-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:6:5-32:19
-20        android:allowBackup="true"
-20-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:7:9-35
-21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.12.0] /home/clinton/.gradle/caches/transforms-3/2ccd268e0ca2e1cd10ec650ac8067a3e/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
-22        android:debuggable="true"
-23        android:extractNativeLibs="false"
-24        android:icon="@drawable/ic_veyra_logo"
-24-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:8:9-47
-25        android:label="@string/app_name"
-25-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:9:9-41
-26        android:supportsRtl="true"
-26-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:10:9-35
-27        android:theme="@style/Theme.Veyra"
-27-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:11:9-43
-28        android:usesCleartextTraffic="true" >
-28-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:12:9-44
-29        <activity
-29-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:14:9-21:20
-30            android:name="com.veyra.app.MainActivity"
-30-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:15:13-41
-31            android:exported="true" >
-31-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:16:13-36
-32            <intent-filter>
-32-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:17:13-20:29
-33                <action android:name="android.intent.action.MAIN" />
-33-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:18:17-69
-33-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:18:25-66
-34
-35                <category android:name="android.intent.category.LAUNCHER" />
-35-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:19:17-77
-35-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:19:27-74
-36            </intent-filter>
-37        </activity>
-38        <activity
-38-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:23:9-26:61
-39            android:name="com.veyra.app.PlayerActivity"
-39-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:24:13-43
-40            android:configChanges="orientation|screenSize"
-40-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:26:13-59
-41            android:exported="false" />
-41-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:25:13-37
-42        <activity
-42-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:28:9-30:40
-43            android:name="com.veyra.app.DetailsActivity"
-43-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:29:13-44
-44            android:exported="false" />
-44-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:30:13-37
-45
-46        <provider
-46-->[androidx.emoji2:emoji2:1.2.0] /home/clinton/.gradle/caches/transforms-3/6f6fec51fc0bf858d6900b90dd62d6da/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-47            android:name="androidx.startup.InitializationProvider"
-47-->[androidx.emoji2:emoji2:1.2.0] /home/clinton/.gradle/caches/transforms-3/6f6fec51fc0bf858d6900b90dd62d6da/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-48            android:authorities="com.veyra.app.androidx-startup"
-48-->[androidx.emoji2:emoji2:1.2.0] /home/clinton/.gradle/caches/transforms-3/6f6fec51fc0bf858d6900b90dd62d6da/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-49            android:exported="false" >
-49-->[androidx.emoji2:emoji2:1.2.0] /home/clinton/.gradle/caches/transforms-3/6f6fec51fc0bf858d6900b90dd62d6da/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-50            <meta-data
-50-->[androidx.emoji2:emoji2:1.2.0] /home/clinton/.gradle/caches/transforms-3/6f6fec51fc0bf858d6900b90dd62d6da/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-51                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-51-->[androidx.emoji2:emoji2:1.2.0] /home/clinton/.gradle/caches/transforms-3/6f6fec51fc0bf858d6900b90dd62d6da/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-52                android:value="androidx.startup" />
-52-->[androidx.emoji2:emoji2:1.2.0] /home/clinton/.gradle/caches/transforms-3/6f6fec51fc0bf858d6900b90dd62d6da/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-53            <meta-data
-53-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/clinton/.gradle/caches/transforms-3/b8d11ad8426ba34454d5792641948162/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
-54                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-54-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/clinton/.gradle/caches/transforms-3/b8d11ad8426ba34454d5792641948162/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
-55                android:value="androidx.startup" />
-55-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/clinton/.gradle/caches/transforms-3/b8d11ad8426ba34454d5792641948162/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
-56            <meta-data
-56-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
-57                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-57-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
-58                android:value="androidx.startup" />
-58-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
-59        </provider>
-60
-61        <receiver
-61-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
-62            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-62-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
-63            android:directBootAware="false"
-63-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
-64            android:enabled="true"
-64-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
-65            android:exported="true"
-65-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
-66            android:permission="android.permission.DUMP" >
-66-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
-67            <intent-filter>
-67-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
-68                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-68-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
-68-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
-69            </intent-filter>
-70            <intent-filter>
-70-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
-71                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-71-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
-71-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
-72            </intent-filter>
-73            <intent-filter>
-73-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
-74                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-74-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
-74-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
-75            </intent-filter>
-76            <intent-filter>
-76-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
-77                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-77-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
-77-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
-78            </intent-filter>
-79        </receiver>
-80    </application>
-81
-82</manifest>
+11    <!-- Required for fetching data and loading web players -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:5:5-67
+12-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:5:22-64
+13
+14    <permission
+14-->[androidx.core:core:1.12.0] /home/clinton/.gradle/caches/transforms-3/2ccd268e0ca2e1cd10ec650ac8067a3e/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+15        android:name="com.veyra.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.12.0] /home/clinton/.gradle/caches/transforms-3/2ccd268e0ca2e1cd10ec650ac8067a3e/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.12.0] /home/clinton/.gradle/caches/transforms-3/2ccd268e0ca2e1cd10ec650ac8067a3e/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.veyra.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.12.0] /home/clinton/.gradle/caches/transforms-3/2ccd268e0ca2e1cd10ec650ac8067a3e/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.12.0] /home/clinton/.gradle/caches/transforms-3/2ccd268e0ca2e1cd10ec650ac8067a3e/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:7:5-42:19
+21        android:allowBackup="true"
+21-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:8:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.12.0] /home/clinton/.gradle/caches/transforms-3/2ccd268e0ca2e1cd10ec650ac8067a3e/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:icon="@drawable/ic_veyra_logo"
+25-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:9:9-47
+26        android:label="@string/app_name"
+26-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:10:9-41
+27        android:supportsRtl="true"
+27-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:11:9-35
+28        android:theme="@style/Theme.Veyra"
+28-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:12:9-43
+29        android:usesCleartextTraffic="true" >
+29-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:13:9-44
+30
+31        <!-- Main Home Screen -->
+32        <activity
+32-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:16:9-23:20
+33            android:name="com.veyra.app.MainActivity"
+33-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:17:13-41
+34            android:exported="true" >
+34-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:18:13-36
+35            <intent-filter>
+35-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:19:13-22:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:20:17-69
+36-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:20:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:21:17-77
+38-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:21:27-74
+39            </intent-filter>
+40        </activity>
+41
+42        <!-- Fullscreen Video Player -->
+43        <activity
+43-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:26:9-29:77
+44            android:name="com.veyra.app.PlayerActivity"
+44-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:27:13-43
+45            android:configChanges="orientation|screenSize|keyboardHidden"
+45-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:29:13-74
+46            android:exported="false" />
+46-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:28:13-37
+47
+48        <!-- Movie/TV Show Details Screen -->
+49        <activity
+49-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:32:9-34:40
+50            android:name="com.veyra.app.DetailsActivity"
+50-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:33:13-44
+51            android:exported="false" />
+51-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:34:13-37
+52
+53        <!-- Settings & Update Checker Screen -->
+54        <activity
+54-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:37:9-40:40
+55            android:name="com.veyra.app.SettingsActivity"
+55-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:38:13-45
+56            android:exported="false"
+56-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:39:13-37
+57            android:label="Settings" />
+57-->/home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:40:13-37
+58
+59        <provider
+59-->[androidx.emoji2:emoji2:1.2.0] /home/clinton/.gradle/caches/transforms-3/6f6fec51fc0bf858d6900b90dd62d6da/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+60            android:name="androidx.startup.InitializationProvider"
+60-->[androidx.emoji2:emoji2:1.2.0] /home/clinton/.gradle/caches/transforms-3/6f6fec51fc0bf858d6900b90dd62d6da/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+61            android:authorities="com.veyra.app.androidx-startup"
+61-->[androidx.emoji2:emoji2:1.2.0] /home/clinton/.gradle/caches/transforms-3/6f6fec51fc0bf858d6900b90dd62d6da/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+62            android:exported="false" >
+62-->[androidx.emoji2:emoji2:1.2.0] /home/clinton/.gradle/caches/transforms-3/6f6fec51fc0bf858d6900b90dd62d6da/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+63            <meta-data
+63-->[androidx.emoji2:emoji2:1.2.0] /home/clinton/.gradle/caches/transforms-3/6f6fec51fc0bf858d6900b90dd62d6da/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+64                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+64-->[androidx.emoji2:emoji2:1.2.0] /home/clinton/.gradle/caches/transforms-3/6f6fec51fc0bf858d6900b90dd62d6da/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+65                android:value="androidx.startup" />
+65-->[androidx.emoji2:emoji2:1.2.0] /home/clinton/.gradle/caches/transforms-3/6f6fec51fc0bf858d6900b90dd62d6da/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+66            <meta-data
+66-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/clinton/.gradle/caches/transforms-3/b8d11ad8426ba34454d5792641948162/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+67                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+67-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/clinton/.gradle/caches/transforms-3/b8d11ad8426ba34454d5792641948162/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+68                android:value="androidx.startup" />
+68-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/clinton/.gradle/caches/transforms-3/b8d11ad8426ba34454d5792641948162/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+69            <meta-data
+69-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+70                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+70-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+71                android:value="androidx.startup" />
+71-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+72        </provider>
+73
+74        <receiver
+74-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+75            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+75-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+76            android:directBootAware="false"
+76-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+77            android:enabled="true"
+77-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+78            android:exported="true"
+78-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+79            android:permission="android.permission.DUMP" >
+79-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+80            <intent-filter>
+80-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+81                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+81-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+81-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+82            </intent-filter>
+83            <intent-filter>
+83-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+84                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+84-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+84-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+85            </intent-filter>
+86            <intent-filter>
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+87                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+88            </intent-filter>
+89            <intent-filter>
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+90                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/clinton/.gradle/caches/transforms-3/76dba03a24495dc966af796d5f293c95/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+91            </intent-filter>
+92        </receiver>
+93    </application>
+94
+95</manifest>

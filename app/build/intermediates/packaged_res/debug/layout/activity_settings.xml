@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#141414"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="App Information"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/currentVersionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Current Version: v1.0.0"
+        android:textColor="#AAAAAA"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/checkUpdatesBtn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Check For Updates"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#E50914"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:indeterminateTint="#E50914"
+        android:visibility="gone"/>
+
+</LinearLayout>

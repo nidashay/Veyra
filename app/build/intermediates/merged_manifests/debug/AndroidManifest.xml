@@ -2,12 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.veyra.app"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0.0" >
 
     <uses-sdk
         android:minSdkVersion="24"
         android:targetSdkVersion="34" />
 
+    <!-- Required for fetching data and loading web players -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <permission
@@ -26,6 +27,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Veyra"
         android:usesCleartextTraffic="true" >
+
+        <!-- Main Home Screen -->
         <activity
             android:name="com.veyra.app.MainActivity"
             android:exported="true" >
@@ -35,13 +38,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Fullscreen Video Player -->
         <activity
             android:name="com.veyra.app.PlayerActivity"
-            android:configChanges="orientation|screenSize"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="false" />
+
+        <!-- Movie/TV Show Details Screen -->
         <activity
             android:name="com.veyra.app.DetailsActivity"
             android:exported="false" />
+
+        <!-- Settings & Update Checker Screen -->
+        <activity
+            android:name="com.veyra.app.SettingsActivity"
+            android:exported="false"
+            android:label="Settings" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

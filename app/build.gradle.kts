@@ -12,7 +12,7 @@ android {
         minSdk = 24
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0.0"
+        versionName = "1.0.0" // This is what BuildConfig.VERSION_NAME reads!
     }
 
     buildTypes {
@@ -30,6 +30,11 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
+    // 🔥 THIS IS THE FIX: Explicitly enable BuildConfig generation
+    buildFeatures {
+        buildConfig = true
+    }
 }
 
 dependencies {
@@ -38,6 +43,6 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     
-    // Coil for lightweight, memory-safe image loading
+    // Coil for lightweight image loading
     implementation("io.coil-kt:coil:2.5.0")
 }

@@ -3199,6 +3199,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id checkUpdatesBtn
 id checkbox
 id checked
 id chronometer
@@ -3224,6 +3225,7 @@ id cos
 id counterclockwise
 id cradle
 id currentState
+id currentVersionText
 id custom
 id customPanel
 id cut
@@ -3733,6 +3735,7 @@ layout abc_tooltip
 layout activity_details
 layout activity_main
 layout activity_player
+layout activity_settings
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

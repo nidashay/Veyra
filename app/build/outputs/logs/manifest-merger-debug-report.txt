@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:2:1-34:12
+ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:2:1-44:12
 MERGED from [com.google.android.material:material:1.11.0] /home/clinton/.gradle/caches/transforms-3/184958b59b0b0fbc0694ac3308e227ed/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/clinton/.gradle/caches/transforms-3/415b44dba470347148fe7836a27170ec/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [io.coil-kt:coil:2.5.0] /home/clinton/.gradle/caches/transforms-3/9fadc059e7a49253742491bf9f4f1171/transformed/coil-2.5.0/AndroidManifest.xml:2:1-7:12
@@ -57,12 +57,12 @@ MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/clinton/.gradle/caches
 	xmlns:android
 		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:4:5-67
+ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:4:22-64
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:6:5-32:19
-INJECTED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:6:5-32:19
+ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:7:5-42:19
+INJECTED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:7:5-42:19
 MERGED from [com.google.android.material:material:1.11.0] /home/clinton/.gradle/caches/transforms-3/184958b59b0b0fbc0694ac3308e227ed/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /home/clinton/.gradle/caches/transforms-3/184958b59b0b0fbc0694ac3308e227ed/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/clinton/.gradle/caches/transforms-3/415b44dba470347148fe7836a27170ec/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -84,47 +84,55 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/clinton/.gradle/cache
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] /home/clinton/.gradle/caches/transforms-3/2ccd268e0ca2e1cd10ec650ac8067a3e/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:11:9-35
 	android:label
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:9:9-41
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:10:9-41
 	android:icon
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:8:9-47
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:9:9-47
 	android:allowBackup
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:7:9-35
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:11:9-43
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:12:9-43
 	android:usesCleartextTraffic
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:12:9-44
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:13:9-44
 activity#com.veyra.app.MainActivity
-ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:14:9-21:20
+ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:16:9-23:20
 	android:exported
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:16:13-36
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:18:13-36
 	android:name
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:15:13-41
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:17:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:17:13-20:29
+ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:19:13-22:29
 action#android.intent.action.MAIN
-ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:18:17-69
+ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:18:25-66
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:19:17-77
+ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:19:27-74
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:21:27-74
 activity#com.veyra.app.PlayerActivity
-ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:23:9-26:61
+ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:26:9-29:77
 	android:exported
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:25:13-37
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:28:13-37
 	android:configChanges
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:26:13-59
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:29:13-74
 	android:name
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:24:13-43
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:27:13-43
 activity#com.veyra.app.DetailsActivity
-ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:28:9-30:40
+ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:32:9-34:40
 	android:exported
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:30:13-37
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:29:13-44
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:33:13-44
+activity#com.veyra.app.SettingsActivity
+ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:37:9-40:40
+	android:label
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:40:13-37
+	android:exported
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:39:13-37
+	android:name
+		ADDED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml:38:13-45
 uses-sdk
 INJECTED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/clinton/Projects/Veyra/app/src/main/AndroidManifest.xml

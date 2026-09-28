@@ -1,9 +1,5 @@
 [
     {
-        "merged": "com.veyra.app-merged_res-32:/layout_item_review.xml.flat",
-        "source": "com.veyra.app-main-34:/layout/item_review.xml"
-    },
-    {
         "merged": "/home/clinton/.gradle/daemon/8.2/com.veyra.app-merged_res-32:/layout_dialog_episode_picker.xml.flat",
         "source": "/home/clinton/.gradle/daemon/8.2/com.veyra.app-main-34:/layout/dialog_episode_picker.xml"
     },
@@ -14,10 +10,6 @@
     {
         "merged": "/home/clinton/.gradle/daemon/8.2/com.veyra.app-merged_res-32:/layout_activity_details.xml.flat",
         "source": "/home/clinton/.gradle/daemon/8.2/com.veyra.app-main-34:/layout/activity_details.xml"
-    },
-    {
-        "merged": "com.veyra.app-merged_res-32:/layout_item_cast.xml.flat",
-        "source": "com.veyra.app-main-34:/layout/item_cast.xml"
     },
     {
         "merged": "/home/clinton/.gradle/daemon/8.2/com.veyra.app-merged_res-32:/drawable_gradient_overlay.xml.flat",
@@ -48,12 +40,20 @@
         "source": "/home/clinton/.gradle/daemon/8.2/com.veyra.app-main-34:/menu/bottom_nav_menu.xml"
     },
     {
+        "merged": "com.veyra.app-merged_res-32:/layout_activity_settings.xml.flat",
+        "source": "com.veyra.app-main-34:/layout/activity_settings.xml"
+    },
+    {
         "merged": "/home/clinton/.gradle/daemon/8.2/com.veyra.app-merged_res-32:/layout_item_banner.xml.flat",
         "source": "/home/clinton/.gradle/daemon/8.2/com.veyra.app-main-34:/layout/item_banner.xml"
     },
     {
-        "merged": "com.veyra.app-merged_res-32:/layout_activity_details.xml.flat",
-        "source": "com.veyra.app-main-34:/layout/activity_details.xml"
+        "merged": "/home/clinton/.gradle/daemon/8.2/com.veyra.app-merged_res-32:/layout_item_review.xml.flat",
+        "source": "/home/clinton/.gradle/daemon/8.2/com.veyra.app-main-34:/layout/item_review.xml"
+    },
+    {
+        "merged": "/home/clinton/.gradle/daemon/8.2/com.veyra.app-merged_res-32:/layout_item_cast.xml.flat",
+        "source": "/home/clinton/.gradle/daemon/8.2/com.veyra.app-main-34:/layout/item_cast.xml"
     },
     {
         "merged": "/home/clinton/.gradle/daemon/8.2/com.veyra.app-merged_res-32:/layout_activity_main.xml.flat",
