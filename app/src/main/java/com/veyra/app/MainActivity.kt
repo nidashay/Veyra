@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
@@ -21,9 +22,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Setup Toolbar
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
+        // Setup Drawer
         drawerLayout = findViewById(R.id.drawerLayout)
         val toggle = ActionBarDrawerToggle(
             this, drawerLayout, toolbar,
@@ -32,26 +35,47 @@ class MainActivity : AppCompatActivity() {
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
+        // Setup Bottom Navigation
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        loadFragment(MoviesFragment())
+        loadFragment(MoviesFragment()) // Default tab
 
         bottomNavigationView.setOnItemSelectedListener { item: MenuItem ->
             when (item.itemId) {
-                R.id.nav_movies -> { loadFragment(MoviesFragment()); true }
-                R.id.nav_tv -> { loadFragment(TVShowsFragment()); true }
-                R.id.nav_recent -> { loadFragment(RecentFragment()); true }
+                R.id.nav_movies -> { 
+                    loadFragment(MoviesFragment())
+                    true 
+                }
+                R.id.nav_tv -> { 
+                    loadFragment(TVShowsFragment())
+                    true 
+                }
+                R.id.nav_recent -> { 
+                    loadFragment(RecentFragment())
+                    true 
+                }
                 else -> false
             }
         }
 
+        // Setup Sidebar Navigation
         val navigationView = findViewById<NavigationView>(R.id.navigationView)
         navigationView.setNavigationItemSelectedListener { menuItem: MenuItem ->
             drawerLayout.closeDrawer(GravityCompat.START)
+            
             when (menuItem.itemId) {
-                R.id.nav_settings -> Toast.makeText(this, "Settings coming soon!", Toast.LENGTH_SHORT).show()
-                R.id.nav_about -> Toast.makeText(this, "Veyra v1.2.0\nBuilt on Arch Linux 🐧\nLightweight & Fast", Toast.LENGTH_LONG).show()
-                R.id.nav_patchnotes -> showPatchNotes()
-                R.id.nav_credits -> Toast.makeText(this, "Developed by Clinton\nPowered by TMDB & VidNest", Toast.LENGTH_LONG).show()
+                R.id.nav_settings -> {
+                    // Opens the new Settings/Update Checker screen
+                    startActivity(Intent(this, SettingsActivity::class.java))
+                }
+                R.id.nav_about -> {
+                    Toast.makeText(this, "Veyra v${BuildConfig.VERSION_NAME}\nBuilt on Arch Linux 🐧\nLightweight & Fast", Toast.LENGTH_LONG).show()
+                }
+                R.id.nav_patchnotes -> {
+                    showPatchNotes()
+                }
+                R.id.nav_credits -> {
+                    Toast.makeText(this, "Developed by Clinton\nPowered by TMDB & VidNest", Toast.LENGTH_LONG).show()
+                }
             }
             true
         }
@@ -67,6 +91,7 @@ class MainActivity : AppCompatActivity() {
             • Categorized horizontal lists (Trending, Top Rated, etc.)
             • Modern Sidebar with Header
             • Watch History tracking
+            • In-app Update Checker
             
             🎬 Details Page Upgrades:
             • Full Cast & Crew profiles with images
@@ -86,7 +111,7 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 
-    private fun loadFragment(fragment: androidx.fragment.app.Fragment) {
+    private fun loadFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainer, fragment)
             .commit()

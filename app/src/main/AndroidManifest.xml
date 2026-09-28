@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Required for fetching data and loading web players -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -11,6 +12,7 @@
         android:theme="@style/Theme.Veyra"
         android:usesCleartextTraffic="true">
         
+        <!-- Main Home Screen -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -20,14 +22,22 @@
             </intent-filter>
         </activity>
         
+        <!-- Fullscreen Video Player -->
         <activity 
             android:name=".PlayerActivity" 
             android:exported="false" 
-            android:configChanges="orientation|screenSize"/>
+            android:configChanges="orientation|screenSize|keyboardHidden" />
 
+        <!-- Movie/TV Show Details Screen -->
         <activity 
             android:name=".DetailsActivity" 
             android:exported="false" />
+
+        <!-- Settings & Update Checker Screen -->
+        <activity 
+            android:name=".SettingsActivity" 
+            android:exported="false" 
+            android:label="Settings" />
         
     </application>
 
