@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Veyra" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Netflix Colors -->
+        <item name="colorPrimary">#E50914</item>
+        <item name="colorPrimaryVariant">#B20710</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#E50914</item>
+        <item name="android:colorBackground">#141414</item>
+        <item name="colorSurface">#181818</item>
+        <item name="colorOnSurface">#FFFFFF</item>
+        <item name="android:statusBarColor">#141414</item>
+        <item name="android:navigationBarColor">#141414</item>
+    </style>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#1E1E1E">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Season &amp; Episode"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/seasonInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Season"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:inputType="number"
+            android:background="#2A2A2A"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/episodeInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Episode"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:inputType="number"
+            android:background="#2A2A2A"
+            android:padding="12dp"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/watchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Watch"
+        android:backgroundTint="#E50914"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>

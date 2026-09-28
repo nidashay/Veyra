@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Veyra</string>
+    <string name="close_drawer">Close navigation drawer</string>
+    <string name="open_drawer">Open navigation drawer</string>
+    <string name="tmdb_api_key">33351af29b52d99892ea98b2ccea92bc</string>
+    <style name="Theme.Veyra" parent="Theme.Material3.Dark.NoActionBar">
+        
+        <item name="colorPrimary">#E50914</item>
+        <item name="colorPrimaryVariant">#B20710</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#E50914</item>
+        <item name="android:colorBackground">#141414</item>
+        <item name="colorSurface">#181818</item>
+        <item name="colorOnSurface">#FFFFFF</item>
+        <item name="android:statusBarColor">#141414</item>
+        <item name="android:navigationBarColor">#141414</item>
+    </style>
+</resources>
