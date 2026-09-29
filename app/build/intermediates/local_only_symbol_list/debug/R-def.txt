@@ -17,6 +17,10 @@ id categoryTitle
 id checkUpdatesBtn
 id contentContainer
 id currentVersionText
+id downloadContainer
+id downloadPercentageText
+id downloadProgressBar
+id downloadStatusText
 id drawerLayout
 id episodeInput
 id episodeSpinner
@@ -71,3 +75,4 @@ string close_drawer
 string open_drawer
 string tmdb_api_key
 style Theme.Veyra
+xml file_paths

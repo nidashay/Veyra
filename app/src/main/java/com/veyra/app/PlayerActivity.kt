@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
+import android.webkit.WebResourceRequest
+import android.webkit.WebResourceResponse
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -15,6 +17,29 @@ class PlayerActivity : AppCompatActivity() {
     private lateinit var webView: WebView
     private var customView: View? = null
     private var customViewCallback: WebChromeClient.CustomViewCallback? = null
+
+    // 🔥 LIGHTWEIGHT AD-BLOCKER: List of known ad/tracking domains to block
+    private val adDomains = setOf(
+        "doubleclick.net",
+        "googlesyndication.com",
+        "adservice.google.com",
+        "popads.net",
+        "exoclick.com",
+        "trafficjunky.com",
+        "juicyads.com",
+        "adnxs.com",
+        "taboola.com",
+        "outbrain.com",
+        "advertising.com",
+        "casalemedia.com",
+        "rubiconproject.com",
+        "openx.net",
+        "pubmatic.com",
+        "scorecardresearch.com",
+        "flurry.com",
+        "appsflyer.com",
+        "adjust.com"
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,9 +68,32 @@ class PlayerActivity : AppCompatActivity() {
         webView.settings.mediaPlaybackRequiresUserGesture = false
         webView.settings.allowFileAccess = true
         
+        // BLOCK POPUP ADS natively
         webView.settings.setSupportMultipleWindows(false)
         webView.settings.javaScriptCanOpenWindowsAutomatically = false
 
+        // 🔥 CUSTOM WEBVIEW CLIENT WITH AD-BLOCKING
+        webView.webViewClient = object : WebViewClient() {
+            override fun shouldInterceptRequest(
+                view: WebView?,
+                request: WebResourceRequest?
+            ): WebResourceResponse? {
+                val url = request?.url?.toString()?.lowercase() ?: return super.shouldInterceptRequest(view, request)
+                
+                // Check if the request URL contains any known ad domain
+                for (domain in adDomains) {
+                    if (url.contains(domain)) {
+                        // Block the ad by returning an empty 204 No Content response
+                        return WebResourceResponse(null, null, null)
+                    }
+                }
+                
+                // If it's not an ad, let it load normally
+                return super.shouldInterceptRequest(view, request)
+            }
+        }
+
+        // Handle HTML5 Fullscreen Video properly
         webView.webChromeClient = object : WebChromeClient() {
             override fun onShowCustomView(view: View?, callback: CustomViewCallback?) {
                 if (customView != null) {
@@ -76,8 +124,6 @@ class PlayerActivity : AppCompatActivity() {
                 )
             }
         }
-        
-        webView.webViewClient = WebViewClient()
 
         val videoUrl = if (isTvShow) {
             val season = intent.getIntExtra("SEASON", 1)

@@ -32,13 +32,42 @@
         android:textColor="#FFFFFF"
         android:backgroundTint="#E50914"/>
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
+    <!-- Download Progress UI (Hidden by default) -->
+    <LinearLayout
+        android:id="@+id/downloadContainer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:indeterminateTint="#E50914"
-        android:visibility="gone"/>
+        android:orientation="vertical"
+        android:layout_marginTop="24dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/downloadStatusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preparing download..."
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"/>
+
+        <ProgressBar
+            android:id="@+id/downloadProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressTint="#E50914"
+            android:max="100"
+            android:progress="0"/>
+
+        <TextView
+            android:id="@+id/downloadPercentageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            android:gravity="end"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
 
 </LinearLayout>

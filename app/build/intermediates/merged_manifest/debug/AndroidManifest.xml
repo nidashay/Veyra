@@ -2,14 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.veyra.app"
     android:versionCode="1"
-    android:versionName="1.0.3" >
+    android:versionName="1.0.5" >
 
     <uses-sdk
         android:minSdkVersion="24"
         android:targetSdkVersion="34" />
 
-    <!-- Required for fetching data and loading web players -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Required to install APKs downloaded by the app -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <permission
         android:name="com.veyra.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -27,8 +28,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Veyra"
         android:usesCleartextTraffic="true" >
-
-        <!-- Main Home Screen -->
         <activity
             android:name="com.veyra.app.MainActivity"
             android:exported="true" >
@@ -38,24 +37,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- Fullscreen Video Player -->
         <activity
             android:name="com.veyra.app.PlayerActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="false" />
-
-        <!-- Movie/TV Show Details Screen -->
         <activity
             android:name="com.veyra.app.DetailsActivity"
             android:exported="false" />
-
-        <!-- Settings & Update Checker Screen -->
         <activity
             android:name="com.veyra.app.SettingsActivity"
             android:exported="false"
             android:label="Settings" />
 
+        <!-- FileProvider for secure APK installation -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.veyra.app.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.veyra.app.androidx-startup"

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Required for fetching data and loading web players -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Required to install APKs downloaded by the app -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +13,6 @@
         android:theme="@style/Theme.Veyra"
         android:usesCleartextTraffic="true">
         
-        <!-- Main Home Screen -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -22,23 +22,30 @@
             </intent-filter>
         </activity>
         
-        <!-- Fullscreen Video Player -->
         <activity 
             android:name=".PlayerActivity" 
             android:exported="false" 
             android:configChanges="orientation|screenSize|keyboardHidden" />
 
-        <!-- Movie/TV Show Details Screen -->
         <activity 
             android:name=".DetailsActivity" 
             android:exported="false" />
 
-        <!-- Settings & Update Checker Screen -->
         <activity 
             android:name=".SettingsActivity" 
             android:exported="false" 
             android:label="Settings" />
+
+        <!-- FileProvider for secure APK installation -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.veyra.app.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
         
     </application>
-
 </manifest>
