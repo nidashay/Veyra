@@ -21,6 +21,7 @@ id drawerLayout
 id episodeInput
 id episodeSpinner
 id fragmentContainer
+id genresText
 id infoText
 id moviePoster
 id movieTitle
@@ -36,6 +37,7 @@ id overviewText
 id posterImage
 id posterTitle
 id progressBar
+id recommendationsRecyclerView
 id recyclerView
 id reviewAuthor
 id reviewContent

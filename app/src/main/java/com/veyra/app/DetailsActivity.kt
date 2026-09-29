@@ -68,8 +68,8 @@ class DetailsActivity : AppCompatActivity() {
     private fun fetchDetails() {
         val apiKey = getString(R.string.tmdb_api_key)
         val type = if (isTvShow) "tv" else "movie"
-        // MAGIC: append_to_response gets everything in one request!
-        val urlString = "https://api.themoviedb.org/3/$type/$movieId?api_key=$apiKey&append_to_response=credits,reviews"
+        // 🔥 MAGIC: Fetch details + credits + reviews + recommendations ALL IN ONE CALL
+        val urlString = "https://api.themoviedb.org/3/$type/$movieId?api_key=$apiKey&append_to_response=credits,reviews,recommendations"
 
         lifecycleScope.launch(Dispatchers.IO) {
             try {
@@ -84,6 +84,54 @@ class DetailsActivity : AppCompatActivity() {
                 val date = json.optString("release_date", json.optString("first_air_date", ""))
                 val year = if (date.length >= 4) date.substring(0, 4) else ""
                 val rating = json.optDouble("vote_average", 0.0)
+
+                // 🔥 Parse Genres
+                val genresList = mutableListOf<String>()
+                val genresArray = json.optJSONArray("genres")
+                if (genresArray != null) {
+                    for (i in 0 until genresArray.length()) {
+                        genresList.add(genresArray.getJSONObject(i).getString("name"))
+                    }
+                }
+
+                // 🔥 Parse Runtime (movies) or Episode Run Time (TV)
+                var runtimeText = ""
+                if (isTvShow) {
+                    val episodeRunTime = json.optJSONArray("episode_run_time")
+                    if (episodeRunTime != null && episodeRunTime.length() > 0) {
+                        val minutes = episodeRunTime.getInt(0)
+                        runtimeText = "${minutes}m per episode"
+                    }
+                    val numberOfEpisodes = json.optInt("number_of_episodes", 0)
+                    if (numberOfEpisodes > 0) {
+                        runtimeText += if (runtimeText.isNotEmpty()) " • $numberOfEpisodes episodes" else "$numberOfEpisodes episodes"
+                    }
+                } else {
+                    val runtime = json.optInt("runtime", 0)
+                    if (runtime > 0) {
+                        val hours = runtime / 60
+                        val minutes = runtime % 60
+                        runtimeText = if (hours > 0) "${hours}h ${minutes}m" else "${minutes}m"
+                    }
+                }
+
+                // 🔥 Parse Recommendations (More Like This)
+                val recommendationsList = mutableListOf<Movie>()
+                val recommendations = json.optJSONObject("recommendations")
+                val recommendationsArray = recommendations?.optJSONArray("results")
+                if (recommendationsArray != null) {
+                    for (i in 0 until minOf(recommendationsArray.length(), 10)) {
+                        val r = recommendationsArray.getJSONObject(i)
+                        recommendationsList.add(
+                            Movie(
+                                id = r.getInt("id"),
+                                title = r.optString("title", r.optString("name", "Unknown")),
+                                posterPath = r.optString("poster_path", null),
+                                isTvShow = isTvShow // Keep the same type (movie/TV)
+                            )
+                        )
+                    }
+                }
 
                 // Parse Cast (Top 8)
                 val castList = mutableListOf<CastMember>()
@@ -117,8 +165,18 @@ class DetailsActivity : AppCompatActivity() {
                 withContext(Dispatchers.Main) {
                     findViewById<TextView>(R.id.titleText).text = title
                     findViewById<TextView>(R.id.overviewText).text = overview
-                    findViewById<TextView>(R.id.infoText).text = "$year • ⭐ ${String.format("%.1f", rating)}"
+                    
+                    // 🔥 Set Genres + Runtime
+                    val genresText = genresList.joinToString(" • ")
+                    findViewById<TextView>(R.id.genresText).text = genresText
+                    
+                    // Build info line: "Year • ⭐ Rating • Runtime"
+                    var infoLine = year
+                    if (rating > 0) infoLine += " • ⭐ ${String.format("%.1f", rating)}"
+                    if (runtimeText.isNotEmpty()) infoLine += " • $runtimeText"
+                    findViewById<TextView>(R.id.infoText).text = infoLine
 
+                    // Load Images
                     val backdropImage = findViewById<ImageView>(R.id.backdropImage)
                     val posterImage = findViewById<ImageView>(R.id.posterImage)
 
@@ -134,6 +192,20 @@ class DetailsActivity : AppCompatActivity() {
                     val reviewRecyclerView = findViewById<RecyclerView>(R.id.reviewRecyclerView)
                     reviewRecyclerView.layoutManager = LinearLayoutManager(this@DetailsActivity)
                     reviewRecyclerView.adapter = ReviewAdapter(reviewList)
+
+                    // 🔥 Setup Recommendations (More Like This)
+                    val recommendationsRecyclerView = findViewById<RecyclerView>(R.id.recommendationsRecyclerView)
+                    recommendationsRecyclerView.layoutManager = LinearLayoutManager(this@DetailsActivity, LinearLayoutManager.HORIZONTAL, false)
+                    
+                    // Reuse the MoviePosterAdapter for recommendations!
+                    val recommendationClickListener: (Movie) -> Unit = { movie ->
+                        val intent = Intent(this@DetailsActivity, DetailsActivity::class.java)
+                        intent.putExtra("MOVIE_ID", movie.id)
+                        intent.putExtra("MOVIE_TITLE", movie.title)
+                        intent.putExtra("IS_TV_SHOW", movie.isTvShow)
+                        startActivity(intent)
+                    }
+                    recommendationsRecyclerView.adapter = MoviePosterAdapter(recommendationsList, recommendationClickListener)
 
                     if (isTvShow) {
                         val numberOfSeasons = json.optInt("number_of_seasons", 1)

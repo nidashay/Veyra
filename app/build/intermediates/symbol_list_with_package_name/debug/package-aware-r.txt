@@ -3295,6 +3295,7 @@ id fragmentContainer
 id fragment_container_view_tag
 id frost
 id fullscreen_header
+id genresText
 id ghost_view
 id ghost_view_holder
 id gone
@@ -3468,6 +3469,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id recommendationsRecyclerView
 id rectangles
 id recyclerView
 id report_drawn
