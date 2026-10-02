@@ -12,13 +12,27 @@ android {
         minSdk = 24
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0.7" // This is what BuildConfig.VERSION_NAME reads!
+        versionName = "1.0.8"
+    }
+
+    // 🔥 SIGNING CONFIGURATION
+    signingConfigs {
+        create("release") {
+            storeFile = file("../veyra-release.keystore")
+            storePassword = "clin200812345678" // ⚠️ REPLACE THIS!
+            keyAlias = "veyra"
+            keyPassword = "clin200812345678" // ⚠️ REPLACE THIS! (usually same as keystore password)
+        }
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName("release") // 🔥 Use the release signing config
+        }
+        debug {
+            signingConfig = signingConfigs.getByName("release") // 🔥 Sign debug builds too!
         }
     }
     
@@ -31,7 +45,6 @@ android {
         jvmTarget = "17"
     }
 
-    // 🔥 THIS IS THE FIX: Explicitly enable BuildConfig generation
     buildFeatures {
         buildConfig = true
     }
@@ -42,7 +55,5 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    
-    // Coil for lightweight image loading
     implementation("io.coil-kt:coil:2.5.0")
 }
