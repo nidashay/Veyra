@@ -22,11 +22,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Setup Toolbar
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        // Setup Drawer
         drawerLayout = findViewById(R.id.drawerLayout)
         val toggle = ActionBarDrawerToggle(
             this, drawerLayout, toolbar,
@@ -35,9 +33,8 @@ class MainActivity : AppCompatActivity() {
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        // Setup Bottom Navigation
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        loadFragment(MoviesFragment()) // Default tab
+        loadFragment(MoviesFragment())
 
         bottomNavigationView.setOnItemSelectedListener { item: MenuItem ->
             when (item.itemId) {
@@ -57,17 +54,16 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Setup Sidebar Navigation
         val navigationView = findViewById<NavigationView>(R.id.navigationView)
         navigationView.setNavigationItemSelectedListener { menuItem: MenuItem ->
             drawerLayout.closeDrawer(GravityCompat.START)
             
             when (menuItem.itemId) {
                 R.id.nav_settings -> {
-                    // Opens the new Settings/Update Checker screen
                     startActivity(Intent(this, SettingsActivity::class.java))
                 }
                 R.id.nav_about -> {
+                    // 🔥 DYNAMIC VERSION: Pulls from build.gradle.kts automatically
                     Toast.makeText(this, "Veyra v${BuildConfig.VERSION_NAME}\nBuilt on Arch Linux 🐧\nLightweight & Fast", Toast.LENGTH_LONG).show()
                 }
                 R.id.nav_patchnotes -> {
@@ -82,8 +78,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showPatchNotes() {
+        // 🔥 DYNAMIC VERSION: Pulls from build.gradle.kts automatically
         val message = """
-            🚀 Veyra v1.2.0 Update
+            🚀 Veyra v${BuildConfig.VERSION_NAME} Update
             
             ✨ New Features:
             • Netflix-style UI with Bottom Navigation
@@ -91,7 +88,10 @@ class MainActivity : AppCompatActivity() {
             • Categorized horizontal lists (Trending, Top Rated, etc.)
             • Modern Sidebar with Header
             • Watch History tracking
-            • In-app Update Checker
+            • In-app Update Checker with progress bar
+            • "More Like This" recommendations
+            • Genre chips and runtime display
+            • Search bar on all tabs
             
             🎬 Details Page Upgrades:
             • Full Cast & Crew profiles with images
@@ -99,9 +99,10 @@ class MainActivity : AppCompatActivity() {
             • Enhanced layout with backdrop & poster overlap
             
             🛠️ Optimizations:
-            • Single API call for details + credits + reviews (saves RAM!)
+            • Single API call for details + credits + reviews + recommendations (saves RAM!)
             • Aggressive popup ad blocking in player
             • True fullscreen immersive video mode
+            • Dynamic versioning system (one source of truth)
         """.trimIndent()
 
         AlertDialog.Builder(this)
